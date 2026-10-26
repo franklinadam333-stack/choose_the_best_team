@@ -46,6 +46,8 @@ The browser runner starts the production server on port 3000. Tests cover the fu
 
 Unit tests check all 23,426 integer 50-seat baselines across 53/56/60 seats (70,278 allocations), exact sums, quota, tie-breaking, entry boundaries, selection reconciliation, factual comparisons and data integrity.
 
+The committed Open Graph PNG is rendered with Chromium for correct Hebrew shaping. To regenerate after branding changes, run `PLAYWRIGHT_CHROMIUM_EXECUTABLE=/usr/bin/chromium npm run generate:share` (or omit the executable override when using Playwright's installed browser). Regeneration is not required during deployment.
+
 ## Calculation
 
 Each scenario starts from a valid 50-seat baseline. Hamilton largest remainder uses integer numerators modulo 50 to avoid floating-point ties. Ties follow the documented fixed order: Eisenkot, Bennett, Golan, Lieberman. Choices never affect allocations. Entry is `position <= partySeats`. This is not Israel's official Bader–Ofer calculation and does not model votes, thresholds, surplus-vote agreements or all 120 seats.
