@@ -1101,9 +1101,9 @@
     "fullNameHe": "דוד אזולאי",
     "partyId": "lieberman",
     "listPosition": 13,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/David%20Azulai%200029.JPG?width=500",
+    "imageCredit": "יעקב",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1111,7 +1111,9 @@
     "sourceCandidateId": "l13",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:David_Azulai_0029.JPG",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "lieberman-14",
