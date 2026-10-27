@@ -319,9 +319,9 @@
     "fullNameHe": "ניר חג׳בי",
     "partyId": "eisenkot",
     "listPosition": 22,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%D7%A0%D7%99%D7%A8%20%D7%97%D7%92'%D7%91%D7%99.jpg?width=500",
+    "imageCredit": "שרון גבאי",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -329,7 +329,10 @@
     "sourceCandidateId": "e22",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:%D7%A0%D7%99%D7%A8_%D7%97%D7%92'%D7%91%D7%99.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "imageNote": null
   },
   {
     "candidateId": "eisenkot-23",
@@ -620,9 +623,9 @@
     "fullNameHe": "אורלי אלידן-הראל",
     "partyId": "bennett",
     "listPosition": 17,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%D7%97%D7%91%D7%A8%20%D7%94%D7%9B%D7%A0%D7%A1%D7%AA%20%D7%9E%D7%A9%D7%94%20%D7%98%D7%95%D7%A8%20%D7%A4%D7%96%20%D7%9E%D7%99%D7%A9%20%D7%A2%D7%AA%D7%99%D7%93%20%D7%95%D7%90%D7%95%D7%A8%D7%9C%D7%99%20%D7%94%D7%A8%D7%90%D7%9C%20%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%AA%20%D7%A9%D7%9C%20%D7%A0%D7%A4%D7%AA%D7%9C%D7%99%20%D7%91%D7%A0%D7%98%20%D7%91%D7%9B%D7%A0%D7%A1%20%D7%91%D7%97%D7%99%D7%A8%D7%95%D7%AA%20%D7%91%D7%A2%D7%99%D7%A8%20%D7%A0%D7%A9%D7%A8.jpg?width=500",
+    "imageCredit": "Hanay",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -630,7 +633,10 @@
     "sourceCandidateId": "b17",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:%D7%97%D7%91%D7%A8_%D7%94%D7%9B%D7%A0%D7%A1%D7%AA_%D7%9E%D7%A9%D7%94_%D7%98%D7%95%D7%A8_%D7%A4%D7%96_%D7%9E%D7%99%D7%A9_%D7%A2%D7%AA%D7%99%D7%93_%D7%95%D7%90%D7%95%D7%A8%D7%9C%D7%99_%D7%94%D7%A8%D7%90%D7%9C_%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%AA_%D7%A9%D7%9C_%D7%A0%D7%A4%D7%AA%D7%9C%D7%99_%D7%91%D7%A0%D7%98_%D7%91%D7%9B%D7%A0%D7%A1_%D7%91%D7%97%D7%99%D7%A8%D7%95%D7%AA_%D7%91%D7%A2%D7%99%D7%A8_%D7%A0%D7%A9%D7%A8.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "imageNote": "תצלום קבוצתי; אורלי הראל מצולמת עם משה טור פז"
   },
   {
     "candidateId": "bennett-18",
@@ -795,9 +801,9 @@
     "fullNameHe": "סומייה בשיר",
     "partyId": "golan",
     "listPosition": 10,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/145993%20alternative%20lighting%20ceremonyalternative%20independ%20PikiWiki%20Israel%20(cropped).jpg?width=500",
+    "imageCredit": "PikiWiki Israel (פרטי הצלם בדף הקובץ)",
+    "imageLicense": "CC BY 2.5",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -805,7 +811,10 @@
     "sourceCandidateId": "d10",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:145993_alternative_lighting_ceremonyalternative_independ_PikiWiki_Israel_(cropped).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+    "imageNote": "נגזר מתמונה באוסף PikiWiki Israel"
   },
   {
     "candidateId": "golan-11",
@@ -1101,9 +1110,9 @@
     "fullNameHe": "דוד אזולאי",
     "partyId": "lieberman",
     "listPosition": 13,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/David%20Azulai%200029.JPG?width=500",
+    "imageCredit": "יעקב",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1111,7 +1120,9 @@
     "sourceCandidateId": "l13",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:David_Azulai_0029.JPG",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "lieberman-14",

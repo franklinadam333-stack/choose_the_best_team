@@ -105,7 +105,7 @@ test('the 22 post-baseline candidates are sourced and photo rights are documente
   const named = eligiblePool(candidates, DEFAULT_BASELINE).filter(isSelectableCandidate);
   assert.equal(named.length, 22);
   assert.deepEqual(PARTIES.map(p => named.filter(c => c.partyId === p.id).length), [3,5,7,7]);
-  assert.equal(candidates.filter(c => c.imagePath !== '/silhouette.svg').length,13);
+  assert.equal(candidates.filter(c => c.imagePath !== '/silhouette.svg').length,17);
   assert.ok(candidates.every(c => c.verificationStatus === 'verified'));
   assert.ok(candidates.every(c => c.sourceUrl?.startsWith('https://bechirot.fyi/lists/26/')));
   for (const c of candidates.filter(c => c.imagePath !== '/silhouette.svg')) {
