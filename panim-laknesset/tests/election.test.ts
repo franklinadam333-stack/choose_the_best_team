@@ -73,7 +73,7 @@ test('newly entering includes unselected positions and excludes baseline incumbe
 test('data validation detects duplicates, order errors, missing verification and image provenance', () => {
   assert.deepEqual(validateData(candidates), []);
   assert.equal(candidates.length, 72);
-  assert.equal(candidates.filter(c => c.verificationStatus === 'verified').length, 0);
+  assert.equal(candidates.filter(c => c.verificationStatus === 'verified').length, 72);
   const c = fixture('eisenkot', 2);
   assert.ok(validateData([c, c]).some(s => s.includes('Duplicate ID')));
   assert.ok(validateData([c, fixture('eisenkot', 1)]).some(s => s.includes('Unordered')));
@@ -83,7 +83,7 @@ test('data validation detects duplicates, order errors, missing verification and
 test('coverage explicitly flags unknown and out-of-pilot places', () => {
   const allocation = allocate(DEFAULT_BASELINE, 60);
   const gaps = coverageGaps(candidates, allocation);
-  assert.equal(gaps.length, 60);
+  assert.equal(gaps.length, 1);
   assert.ok(gaps.some(g => g.partyId === 'eisenkot' && g.position === 25));
   const known = [fixture('eisenkot', 1)];
   assert.equal(coverageGaps(known, allocation).length, 59);
@@ -94,26 +94,24 @@ test('invalid baselines and unsupported scenarios are rejected', () => {
   assert.throws(() => allocate({ ...custom, eisenkot: 18.5, bennett: 12.5 }, 53));
   assert.throws(() => allocate(custom, 54 as 53));
 });
-test.skip('full ten-person acceptance: Tal Ohana is not present in the supplied 22-person file', () => {
-  // Do not invent the missing person's affiliation/position to force the 3/3/4 expectation.
+test('ten-person acceptance case uses the published lists for 3/3/4 entry counts', () => {
+  const names = ['ולדימיר בליאק','ניר חג׳בי','לילי בן עמי','תומר אביטל','נאור שירי','טל אוחנה','לימור מגן תלם','אורלי אלידן-הראל','דן אילוז','יוראי להב הרצנו'];
+  const selected = candidates.filter(c => c.fullNameHe && names.includes(c.fullNameHe));
+  assert.equal(selected.length, 10);
+  assert.deepEqual(SCENARIOS.map(n => selected.filter(c => enters(c, allocate(custom,n))).length),[3,3,4]);
 });
 
-
-test('the supplied 22 candidates are selectable by default, retain provenance and use silhouettes', () => {
+test('the 22 post-baseline candidates are sourced and photo rights are documented', () => {
   const named = eligiblePool(candidates, DEFAULT_BASELINE).filter(isSelectableCandidate);
   assert.equal(named.length, 22);
-  assert.deepEqual(named.map(c => c.pilotSlot).sort((a, b) => a! - b!), Array.from({ length: 22 }, (_, i) => i + 51));
-  assert.deepEqual(PARTIES.map(p => named.filter(c => c.partyId === p.id).length), [3, 5, 7, 7]);
-  for (const c of named) {
-    assert.equal(c.verificationStatus, 'unverified');
-    assert.equal(c.lastVerifiedAt, null);
-    assert.equal(c.imagePath, '/silhouette.svg');
-    assert.equal(c.imageLicense, null);
-    assert.equal(c.dataOrigin, 'user_provided');
-    assert.ok(c.sourceUrl?.startsWith('https://www.knessetlens.com/members/'));
+  assert.deepEqual(PARTIES.map(p => named.filter(c => c.partyId === p.id).length), [3,5,7,7]);
+  assert.equal(candidates.filter(c => c.imagePath !== '/silhouette.svg').length,13);
+  assert.ok(candidates.every(c => c.verificationStatus === 'verified'));
+  assert.ok(candidates.every(c => c.sourceUrl?.startsWith('https://bechirot.fyi/lists/26/')));
+  for (const c of candidates.filter(c => c.imagePath !== '/silhouette.svg')) {
+    assert.ok(c.imageCredit && c.imageLicense && c.imageSourceUrl && c.imageLicenseUrl);
   }
-  assert.equal(named.find(c => c.candidateId === 'eisenkot-22')?.fullNameHe, 'ניר חג׳בי');
-  assert.equal(named.find(c => c.candidateId === 'golan-15')?.fullNameHe, 'תומר אביטל');
+  assert.equal(candidates.find(c => c.candidateId === 'eisenkot-21')?.fullNameHe,'יפה טבג\'ה');
 });
 
 test('nine provided names in the original acceptance example use actual supplied positions', () => {
@@ -121,5 +119,5 @@ test('nine provided names in the original acceptance example use actual supplied
   const selected = candidates.filter(c => c.fullNameHe && names.includes(c.fullNameHe));
   assert.equal(selected.length, 9);
   assert.deepEqual(SCENARIOS.map(n => selected.filter(c => enters(c, allocate(custom, n))).length), [2, 2, 3]);
-  assert.ok(!candidates.some(c => c.fullNameHe === 'טל אוחנה'));
+  assert.ok(candidates.some(c => c.fullNameHe === 'טל אוחנה'));
 });
