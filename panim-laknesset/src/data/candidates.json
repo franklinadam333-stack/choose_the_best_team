@@ -339,9 +339,9 @@
     "fullNameHe": "רון ברקאי",
     "partyId": "eisenkot",
     "listPosition": 23,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://yasharwitheisenkot.com/wp-content/uploads/2026/09/%D7%A8%D7%95%D7%9F-%D7%91%D7%A8%D7%A7%D7%90%D7%99-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.png",
+    "imageCredit": "מפלגת ישר! עם איזנקוט",
+    "imageLicense": "זכויות שמורות; רשות שימוש חוזר טרם אומתה",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -349,16 +349,20 @@
     "sourceCandidateId": "e23",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://yasharwitheisenkot.com/team-member/ron-barkai/",
+    "imageLicenseUrl": null,
+    "imageRightsStatus": "unconfirmed",
+    "imageNote": "תמונה משרת המקור; אינה ברישיון Creative Commons מאומת"
   },
   {
     "candidateId": "eisenkot-24",
     "fullNameHe": "שי אנדראה פישר",
     "partyId": "eisenkot",
     "listPosition": 24,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://yasharwitheisenkot.com/wp-content/uploads/2026/09/%D7%A9%D7%99-%D7%A4%D7%99%D7%A9%D7%A8-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.png",
+    "imageCredit": "מפלגת ישר! עם איזנקוט",
+    "imageLicense": "זכויות שמורות; רשות שימוש חוזר טרם אומתה",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -366,7 +370,11 @@
     "sourceCandidateId": "e24",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%93%D7%A8%D7%9A",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://yasharwitheisenkot.com/team-member/shai-fisher/",
+    "imageLicenseUrl": null,
+    "imageRightsStatus": "unconfirmed",
+    "imageNote": "תמונה משרת המקור; אינה ברישיון Creative Commons מאומת"
   },
   {
     "candidateId": "bennett-01",
@@ -587,9 +595,9 @@
     "fullNameHe": "ניסן זאבי",
     "partyId": "bennett",
     "listPosition": 15,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://be-yahad.org.il/wp-content/uploads/2026/09/15-%D7%A0%D7%99%D7%A1%D7%9F-%D7%96%D7%90%D7%91%D7%99-1024x683.jpg",
+    "imageCredit": "מפלגת ביחד",
+    "imageLicense": "זכויות שמורות; רשות שימוש חוזר טרם אומתה",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -597,7 +605,11 @@
     "sourceCandidateId": "b15",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://be-yahad.org.il/team/%D7%A0%D7%99%D7%A1%D7%9F-%D7%96%D7%90%D7%91%D7%99/",
+    "imageLicenseUrl": null,
+    "imageRightsStatus": "unconfirmed",
+    "imageNote": "תמונה משרת המקור; אינה ברישיון Creative Commons מאומת"
   },
   {
     "candidateId": "bennett-16",
@@ -1036,9 +1048,9 @@
     "fullNameHe": "אלוירה קוליחמן",
     "partyId": "lieberman",
     "listPosition": 9,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://www.lod.muni.il/uploads/n/1709622882.5619.jpg",
+    "imageCredit": "עיריית לוד",
+    "imageLicense": "זכויות שמורות; רשות שימוש חוזר טרם אומתה",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1046,7 +1058,11 @@
     "sourceCandidateId": "l9",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://www.lod.muni.il/he/175/",
+    "imageLicenseUrl": null,
+    "imageRightsStatus": "unconfirmed",
+    "imageNote": "תמונה משרת המקור; אינה ברישיון Creative Commons מאומת"
   },
   {
     "candidateId": "lieberman-10",
@@ -1148,9 +1164,9 @@
     "fullNameHe": "ישראל יאיר בן שיטרית",
     "partyId": "lieberman",
     "listPosition": 15,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://images.wcdn.co.il/4/0/4/7/4047323-46",
+    "imageCredit": "וואלה שבע דרום / זכויות הצלם המקורי",
+    "imageLicense": "זכויות שמורות; רשות שימוש חוזר טרם אומתה",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1158,6 +1174,10 @@
     "sourceCandidateId": "l15",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://sheva7.walla.co.il/item/3835972",
+    "imageLicenseUrl": null,
+    "imageRightsStatus": "unconfirmed",
+    "imageNote": "תמונה משרת המקור; אינה ברישיון Creative Commons מאומת"
   }
 ]
