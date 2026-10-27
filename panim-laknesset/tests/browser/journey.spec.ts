@@ -67,7 +67,7 @@ test('undecided, one selection, image fallback, and returning to baseline', asyn
   await expect(page.locator('.comparison-panel')).toContainText('עדיין לא החלטת');
   await expect(page.locator('.original-intention strong')).toHaveText('עדיין לא החלטתי');
   await page.getByRole('button', { name: 'שינוי קו הבסיס', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'מפת הבסיס שלך' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '50 מנדטים בטוחים- מה החלוקה שלך בגוש?' })).toBeVisible();
 });
 
 test('first page is responsive and keyboard usable', async ({ page }) => {
