@@ -1,4 +1,4 @@
-import { candidates, DEFAULT_BASELINE, PARTIES, reconcileSelection, SCENARIOS, sumSeats, validSeats, type Candidate, type PartyId, type Scenario, type Seats } from './election';
+import { candidates, DEFAULT_BASELINE, isSelectableCandidate, PARTIES, reconcileSelection, SCENARIOS, sumSeats, validSeats, type Candidate, type PartyId, type Scenario, type Seats } from './election';
 
 export type Vote = PartyId | 'undecided';
 export type Session = { version: 1; step: number; initialVote: Vote | null; baseline: Seats; selectedIds: string[]; demo: boolean; scenario: Scenario };
@@ -15,7 +15,7 @@ export function readSession(value: string | null, data: Candidate[] = candidates
     if (s.version !== 1 || !validSeats(s.baseline) || !Array.isArray(s.selectedIds) || !s.selectedIds.every((v: unknown) => typeof v === 'string')) return newSession();
     const initialVote = PARTIES.some(p => p.id === s.initialVote) || s.initialVote === 'undecided' ? s.initialVote as Vote : null;
     const demo = s.demo === true;
-    const selectable = demo ? data : data.filter(c => c.verificationStatus === 'verified');
+    const selectable = demo ? data : data.filter(isSelectableCandidate);
     const selectedIds = reconcileSelection(s.selectedIds, selectable, s.baseline);
     const maxStep = !initialVote ? 1 : sumSeats(s.baseline) !== 50 ? 2 : !selectedIds.length ? 3 : 4;
     const requested = typeof s.step === 'number' && Number.isInteger(s.step) ? s.step : 1;

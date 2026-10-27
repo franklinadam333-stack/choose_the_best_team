@@ -8,4 +8,4 @@ npm ci
 npm run dev
 ```
 
-This is a development simulator with explicitly missing candidate data; see the project README for validation, data verification requirements, and deployment instructions. Vercel Root Directory: `panim-laknesset`.
+This is a development simulator with 22 user-supplied, unverified candidate records and 50 missing pilot slots; see the project README for validation, data verification requirements, and deployment instructions. Vercel Root Directory: `panim-laknesset`.

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { allocate, candidates, coverageGaps, DEFAULT_BASELINE, eligiblePool, enters, factualComparison, newlyEntering, PARTIES, reconcileSelection, SCENARIOS, sumSeats, toggleSelection, validateData, type Candidate, type Seats } from '../src/lib/election';
+import { allocate, candidates, coverageGaps, DEFAULT_BASELINE, eligiblePool, enters, factualComparison, isSelectableCandidate, newlyEntering, PARTIES, reconcileSelection, SCENARIOS, sumSeats, toggleSelection, validateData, type Candidate, type Seats } from '../src/lib/election';
 
 const custom: Seats = { eisenkot: 18, bennett: 13, golan: 14, lieberman: 5 };
 // Synthetic fixtures test arithmetic only. These are not real candidate identities.
@@ -94,6 +94,32 @@ test('invalid baselines and unsupported scenarios are rejected', () => {
   assert.throws(() => allocate({ ...custom, eisenkot: 18.5, bennett: 12.5 }, 53));
   assert.throws(() => allocate(custom, 54 as 53));
 });
-test.skip('named pilot acceptance: blocked pending sourced names, affiliations and ordered positions', () => {
-  // Do not invent party/position mappings to force the supplied 3/3/4 expectation.
+test.skip('full ten-person acceptance: Tal Ohana is not present in the supplied 22-person file', () => {
+  // Do not invent the missing person's affiliation/position to force the 3/3/4 expectation.
+});
+
+
+test('the supplied 22 candidates are selectable by default, retain provenance and use silhouettes', () => {
+  const named = eligiblePool(candidates, DEFAULT_BASELINE).filter(isSelectableCandidate);
+  assert.equal(named.length, 22);
+  assert.deepEqual(named.map(c => c.pilotSlot).sort((a, b) => a! - b!), Array.from({ length: 22 }, (_, i) => i + 51));
+  assert.deepEqual(PARTIES.map(p => named.filter(c => c.partyId === p.id).length), [3, 5, 7, 7]);
+  for (const c of named) {
+    assert.equal(c.verificationStatus, 'unverified');
+    assert.equal(c.lastVerifiedAt, null);
+    assert.equal(c.imagePath, '/silhouette.svg');
+    assert.equal(c.imageLicense, null);
+    assert.equal(c.dataOrigin, 'user_provided');
+    assert.ok(c.sourceUrl?.startsWith('https://www.knessetlens.com/members/'));
+  }
+  assert.equal(named.find(c => c.candidateId === 'eisenkot-22')?.fullNameHe, 'ניר חג׳בי');
+  assert.equal(named.find(c => c.candidateId === 'golan-15')?.fullNameHe, 'תומר אביטל');
+});
+
+test('nine provided names in the original acceptance example use actual supplied positions', () => {
+  const names = ['ולדימיר בליאק', 'ניר חג׳בי', 'לילי בן עמי', 'תומר אביטל', 'נאור שירי', 'לימור מגן תלם', 'אורלי אלידן-הראל', 'דן אילוז', 'יוראי להב הרצנו'];
+  const selected = candidates.filter(c => c.fullNameHe && names.includes(c.fullNameHe));
+  assert.equal(selected.length, 9);
+  assert.deepEqual(SCENARIOS.map(n => selected.filter(c => enters(c, allocate(custom, n))).length), [2, 2, 3]);
+  assert.ok(!candidates.some(c => c.fullNameHe === 'טל אוחנה'));
 });

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { newSession, readSession } from '../src/lib/session';
+import { candidates } from '../src/lib/election';
 
 test('damaged, absent and unsupported saved sessions recover to a clean start', () => {
   for (const value of [null, '', '{', 'null', '[]', 'true', '{"version":2}', '{"version":1,"baseline":null}']) {
@@ -19,9 +20,10 @@ test('restoration drops duplicate, removed and newly ineligible IDs without losi
   assert.deepEqual(readSession(JSON.stringify(saved)).selectedIds, ['golan-09']);
   assert.equal(readSession(JSON.stringify(saved)).step, 4);
 });
-test('unverified selections cannot be restored into real-data mode', () => {
+test('unnamed selections cannot be restored outside anonymous test mode', () => {
   const saved = { ...newSession(), step: 4, initialVote: 'undecided', demo: false, selectedIds: ['golan-09'] };
-  const restored = readSession(JSON.stringify(saved));
+  const unnamed = { ...candidates.find(c => c.candidateId === 'golan-09')!, fullNameHe: null, sourceUrl: null, verificationStatus: 'missing' as const };
+  const restored = readSession(JSON.stringify(saved), [unnamed]);
   assert.equal(restored.step, 3);
   assert.deepEqual(restored.selectedIds, []);
 });

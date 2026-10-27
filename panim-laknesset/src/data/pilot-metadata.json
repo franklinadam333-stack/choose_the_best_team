@@ -1,0 +1,22 @@
+{
+  "title": "פנים לכנסת - מועמדים שמעבר לקו 50",
+  "sourceFile": "panim_laknesset_candidates_51_72.json",
+  "declaredVerificationDate": "2026-10-27",
+  "importedAt": "2026-10-27",
+  "origin": "user_provided",
+  "independentlyVerified": false,
+  "candidateCount": 22,
+  "baseline": {
+    "eisenkot": 21,
+    "bennett": 13,
+    "golan": 8,
+    "lieberman": 8
+  },
+  "notes": [
+    "pilotSlot 51-72 הוא מספור פנימי של האפליקציה, לא דירוג רשמי משותף.",
+    "profileUrl הוא עמוד פרופיל, לא קישור ישיר לקובץ תמונה.",
+    "לפני שימוש ציבורי בתצלומים יש לאמת את בעל הזכויות, הרישיון, והתאמת התמונה למועמד.",
+    "imageUrl נשמר ריק עד שאומת קישור ישיר ומותר לשימוש.",
+    "בחלוקת מנדטים אחרת יש לבנות את רשימת הכרטיסים מחדש מתוך כל רשימות המועמדים."
+  ]
+}

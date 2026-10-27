@@ -14,7 +14,8 @@ test('complete RTL four-step journey, limits, tabs, persistence, alternative and
   for (let i = 0; i < 6; i++) await page.getByRole('button', { name: 'הוסף מנדט: הדמוקרטים, גולן', exact: true }).click();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'הפחת מנדט: ישראל ביתנו, ליברמן', exact: true }).click();
   await page.getByRole('button', { name: 'המשך לבחירת אנשים' }).click();
-  await expect(page.getByRole('heading', { name: 'ממתינים לנתונים שאפשר לסמוך עליהם' })).toBeVisible();
+  await expect(page.locator('.candidate-card')).toHaveCount(6);
+  await expect(page.locator('.selection-toolbar')).toContainText('16 מועמדים מנתוני הפיילוט');
   await page.getByRole('checkbox', { name: 'הפעלת מצב בדיקה עם מקומות לא מאומתים' }).check();
   await expect(page.locator('.candidate-card')).toHaveCount(6);
   await expect(page.locator('.candidate-grid')).not.toContainText('איזנקוט');

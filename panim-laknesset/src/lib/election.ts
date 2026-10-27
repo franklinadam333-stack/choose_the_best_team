@@ -22,8 +22,16 @@ export interface Candidate {
   sourceUrl: string | null;
   lastVerifiedAt: string | null;
   verificationStatus: 'verified' | 'unverified' | 'missing';
+  pilotSlot?: number;
+  sourceCandidateId?: string;
+  profileUrl?: string;
+  officialProfileUrl?: string | null;
+  dataOrigin?: 'user_provided';
 }
 export const candidates = rawCandidates as Candidate[];
+export function isSelectableCandidate(candidate: Candidate): boolean {
+  return candidate.verificationStatus !== 'missing' && !!candidate.fullNameHe?.trim() && !!candidate.sourceUrl?.startsWith('https://');
+}
 export const partyName = (id: PartyId) => PARTIES.find(p => p.id === id)!.name;
 export const sumSeats = (seats: Seats) => PARTIES.reduce((sum, p) => sum + seats[p.id], 0);
 export function validSeats(value: unknown): value is Seats {
@@ -78,6 +86,7 @@ export function validateData(data: Candidate[]): string[] {
     if (!PARTIES.some(p => p.id === c.partyId) || !Number.isInteger(c.listPosition) || c.listPosition < 1) issues.push(`Invalid position: ${key}`);
     if ((previous[c.partyId] ?? 0) >= c.listPosition) issues.push(`Unordered list: ${key}`);
     previous[c.partyId] = c.listPosition;
+    if (c.verificationStatus === 'unverified' && (!c.fullNameHe?.trim() || !c.sourceUrl?.startsWith('https://'))) issues.push(`Missing pilot source: ${key}`);
     if (c.verificationStatus === 'verified' && (!c.fullNameHe?.trim() || !c.sourceUrl?.startsWith('https://') || !c.lastVerifiedAt || !Number.isFinite(Date.parse(c.lastVerifiedAt)))) issues.push(`Missing verification metadata: ${key}`);
     if (c.imagePath !== '/silhouette.svg' && (!c.imageCredit || !c.imageLicense || c.verificationStatus !== 'verified')) issues.push(`Unverified image: ${key}`);
   }

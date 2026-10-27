@@ -4,11 +4,17 @@ A Hebrew RTL informational seat-allocation simulator, built with Next.js App Rou
 
 ## Status: development simulator, not verified election information
 
-The supplied brief describes 72 pilot positions but includes no sourced ordered candidate dataset. `src/data/candidates.json` therefore contains **72 explicitly missing anonymous slots**, not invented candidate names, affiliations or portraits. Even the four proposed party identities require authoritative verification. Default selection shows verified candidates only (currently none). An explicit, opt-in test mode makes anonymous pilot slots selectable to exercise the entire flow. All results remain visibly marked as unverified. Search indexing is disabled.
+The user-supplied `panim_laknesset_candidates_51_72.json` has now been integrated: **22 named pilot candidates** are visible by default, with 50 earlier anonymous slots retained for baseline changes. Internal candidate IDs remain stable. Party distribution of the imported records is 3 / 5 / 7 / 7 at positions 22–24 / 14–18 / 9–15 / 9–15 respectively. The imported names, affiliations and list positions are user-provided and **not independently verified**. Every imported record is marked `unverified`, has a supplied profile link, and retains a neutral silhouette because no licensed image was supplied. Search indexing remains disabled.
 
-The named 10-person acceptance case is **blocked**: party affiliations and list positions were not supplied. No mappings were invented to force the expected 3/3/4 result. Its test is explicitly skipped. Government election sources could not be accessed from the current environment (proxy returned 403).
+`src/data/candidates.json` is the single candidate-data source. `src/data/pilot-metadata.json` records the supplied file's provenance and its declared verification date separately from independent verification; `lastVerifiedAt` remains null on imported records. The app never treats a profile-page URL as an image or as proof of official list order. Sources are available in an expandable section on the results screen.
 
-To try the app without recording a party preference, choose **התנסות ללא בחירה פוליטית** on the first screen. This explicitly enables anonymous test mode and uses “undecided” as the initial intention, without preselecting candidates. The baseline reset restores the documented default; selection clearing preserves the baseline and initial intention. Scenario tabs support RTL arrow keys, Home and End. Missing images fall back to an inline icon, even when the placeholder image cannot load. Saved sessions are validated on restore, with stale selections removed and incomplete sessions returned to the appropriate step. The app remains usable when localStorage is blocked, but progress then cannot survive a reload.
+The full named 10-person acceptance example remains **blocked** because Tal Ohana and her position are absent from this file. The other nine supplied names are tested using the actual imported positions: the custom baseline produces 2/2/3 entries for those nine, without inventing the missing tenth record. The original ten-person test remains explicitly skipped.
+
+To try the app without recording a party preference, choose **התנסות ללא בחירה פוליטית**. Normal mode shows named pilot records; anonymous test mode also includes missing slots that become eligible after baseline changes. Candidate selection and saved-session recovery use the same eligibility rule. The baseline reset restores the documented default; selection clearing preserves the baseline and initial intention. Scenario tabs support RTL arrow keys, Home and End. Missing images fall back to an inline icon. The app remains usable when localStorage is blocked, but progress then cannot survive a reload.
+
+Restart is available at the top of every step. Global back/continue controls and clickable step navigation preserve choices, enforce completion requirements, and show 0% / 33% / 67% / 100% progress.
+
+The results show a factual distribution across all four lists and identify the original intention. They do not recommend changing a vote or rank a party as the correct choice. A visible footnote explains the pilot data and simulation limits.
 
 ## Local development
 
@@ -58,7 +64,7 @@ Alternative allocations are local to the current results view. They must sum to 
 
 ## Supplying real data
 
-Replace missing slots in `src/data/candidates.json` using authoritative sources. Keep official list order, unique candidate IDs and unique party/position pairs. Every record has:
+Replace remaining missing slots in `src/data/candidates.json` using authoritative sources, and independently verify the 22 imported pilot records before marking them verified. Keep official list order, unique candidate IDs and unique party/position pairs. Every record has:
 
 `candidateId`, `fullNameHe`, `partyId`, `listPosition`, `imagePath`, `imageCredit`, `imageLicense`, `sourceUrl`, `lastVerifiedAt`, `verificationStatus`.
 
@@ -78,7 +84,7 @@ For CLI deployment, use a Vercel account authenticated in your own environment:
 npx vercel deploy --prod --verify
 ```
 
-No production account is connected to the current cloud machine. Do not put deployment tokens in Git or chat. Confirm the actual public deployment and its Open Graph image before claiming publication. A development preview with anonymous data is not a verified production election application.
+No production account is connected to the current cloud machine. Do not put deployment tokens in Git or chat. Confirm the actual public deployment and its Open Graph image before claiming publication. A development preview with user-supplied pilot data is not a verified production election application.
 
 ## Privacy and accessibility
 
