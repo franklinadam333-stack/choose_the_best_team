@@ -11,7 +11,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ||
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'פנים לכנסת | את מי היית רוצה לראות בכנסת?',
-  description: 'פנים לכנסת: בוחרים אנשים, בוחנים רשימות. סימולטור המציג כיצד חלוקת מנדטים משפיעה על האנשים שעשויים להיכנס לכנסת. כולל 22 שמות מנתוני פיילוט שסופקו, ללא אימות עצמאי.',
+  description: 'פנים לכנסת: בוחרים אנשים, בוחנים רשימות. סימולטור המציג כיצד חלוקת מנדטים משפיעה על האנשים שעשויים להיכנס לכנסת. כולל 72 שמות ומיקומים שנבדקו מול פרסומים המבוססים על רשימות ועדת הבחירות. תמונות המועמדים טרם הושלמו.',
   robots: { index: false, follow: false },
   openGraph: { title: 'פנים לכנסת', description: 'בוחרים אנשים, בוחנים רשימות. סימולטור חלוקת מנדטים — גרסת פיתוח.', locale: 'he_IL', type: 'website' },
   twitter: { card: 'summary_large_image' },
