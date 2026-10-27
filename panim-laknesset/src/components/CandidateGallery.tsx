@@ -49,6 +49,6 @@ export default function CandidateGallery({ candidates, portrait }: { candidates:
       </div><button className="gallery-play text-button" onClick={() => setPlaying(p => !p)} aria-label={playing ? 'השהיית הגלריה' : 'הפעלת הגלריה'}>{playing ? <Pause size={15} /> : <Play size={15} />}{playing ? 'השהיה' : 'הפעלה'}</button></div>
       <div className="gallery-options" aria-label="חמש האפשרויות בגלריה">{options.map((candidate, index) => <button key={candidate.candidateId} aria-pressed={active === index} onClick={() => { setActive(index); setPlaying(false); }}>{candidate.fullNameHe}</button>)}</div>
     </>}
-    <p className="gallery-note">* אלה שמות מנתוני הפיילוט, לא בהכרח חברי כנסת מכהנים. השיוכים והמיקומים לא אומתו עצמאית. מוצגות צלליות עד לקבלת תמונות מאומתות ומורשות. הדפדוף בגלריה אינו מסמן בחירה בסימולטור.</p>
+    <p className="gallery-note">* אלה שמות ממאגר הפיילוט, לא בהכרח חברי כנסת מכהנים. אין בגלריה המלצת הצבעה. כאשר אין תמונה מאומתת ומורשית מוצגת צללית. הדפדוף בגלריה אינו מסמן בחירה בסימולטור.</p>
   </section>;
 }

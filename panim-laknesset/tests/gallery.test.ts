@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { candidates } from '../src/lib/election';
+import { candidates, DEFAULT_BASELINE, isSelectableCandidate } from '../src/lib/election';
 import { sampleGallery } from '../src/lib/gallery';
 
 test('gallery samples exactly five unique named candidates without modifying the roster', () => {
@@ -9,7 +9,7 @@ test('gallery samples exactly five unique named candidates without modifying the
     const sample = sampleGallery(candidates);
     assert.equal(sample.length, 5);
     assert.equal(new Set(sample.map(c => c.candidateId)).size, 5);
-    assert.ok(sample.every(c => c.fullNameHe && c.dataOrigin === 'user_provided'));
+    assert.ok(sample.every(c => isSelectableCandidate(c) && c.listPosition > DEFAULT_BASELINE[c.partyId]));
   }
   assert.deepEqual(candidates, original);
 });

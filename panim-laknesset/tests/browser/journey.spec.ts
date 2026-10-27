@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('complete RTL four-step journey, limits, tabs, persistence, alternative and clear', async ({ page }) => {
+  test.setTimeout(60_000); // Full journey includes portrait fallbacks and a full-page results capture.
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
@@ -15,7 +16,7 @@ test('complete RTL four-step journey, limits, tabs, persistence, alternative and
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'הפחת מנדט: ישראל ביתנו, ליברמן', exact: true }).click();
   await page.getByRole('button', { name: 'המשך לבחירת אנשים' }).click();
   await expect(page.locator('.candidate-card')).toHaveCount(6);
-  await expect(page.locator('.selection-toolbar')).toContainText('16 מועמדים מנתוני הפיילוט');
+  await expect(page.locator('.selection-toolbar')).toContainText('22 מועמדים מנתוני הפיילוט');
   await page.getByRole('checkbox', { name: 'הפעלת מצב בדיקה עם מקומות לא מאומתים' }).check();
   await expect(page.locator('.candidate-card')).toHaveCount(6);
   await expect(page.locator('.candidate-grid')).not.toContainText('איזנקוט');
@@ -55,7 +56,7 @@ test('complete RTL four-step journey, limits, tabs, persistence, alternative and
 });
 
 test('undecided, one selection, image fallback, and returning to baseline', async ({ page }) => {
-  await page.route('**/silhouette.svg', route => route.abort());
+  await page.route('**/*', route => route.request().resourceType() === 'image' ? route.abort() : route.continue());
   await page.goto('/');
   await page.getByRole('radio', { name: 'עדיין לא החלטתי', exact: true }).click();
   await page.getByRole('button', { name: 'המשך למפת הגוש' }).click();
