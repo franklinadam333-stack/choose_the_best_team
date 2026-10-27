@@ -26,6 +26,8 @@ export interface Candidate {
   sourceCandidateId?: string;
   profileUrl?: string;
   officialProfileUrl?: string | null;
+  imageSourceUrl?: string;
+  imageLicenseUrl?: string;
   dataOrigin?: 'user_provided' | 'official_cec_mirror';
 }
 export const candidates = rawCandidates as Candidate[];
