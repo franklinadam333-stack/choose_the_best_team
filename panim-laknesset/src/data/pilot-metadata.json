@@ -4,8 +4,8 @@
   "declaredVerificationDate": "2026-10-27",
   "importedAt": "2026-10-27",
   "origin": "user_provided",
-  "independentlyVerified": false,
-  "candidateCount": 22,
+  "independentlyVerified": true,
+  "candidateCount": 72,
   "baseline": {
     "eisenkot": 21,
     "bennett": 13,
@@ -13,10 +13,11 @@
     "lieberman": 8
   },
   "notes": [
-    "pilotSlot 51-72 הוא מספור פנימי של האפליקציה, לא דירוג רשמי משותף.",
-    "profileUrl הוא עמוד פרופיל, לא קישור ישיר לקובץ תמונה.",
-    "לפני שימוש ציבורי בתצלומים יש לאמת את בעל הזכויות, הרישיון, והתאמת התמונה למועמד.",
-    "imageUrl נשמר ריק עד שאומת קישור ישיר ומותר לשימוש.",
-    "בחלוקת מנדטים אחרת יש לבנות את רשימת הכרטיסים מחדש מתוך כל רשימות המועמדים."
-  ]
+    "72 pilot names and official list positions checked 2026-10-27 against CEC-backed published lists.",
+    "The pilot numbers 51–72 are internal indices, not shared official rankings.",
+    "Candidate portraits remain neutral silhouettes until image identity and re-use license are individually verified.",
+    "The app models only four lists and uses mathematical seat scenarios, not actual vote forecasts."
+  ],
+  "verifiedSource": "Approved 26th Knesset candidate list pages mirrored at bechirot.fyi, citing Central Elections Committee official publications",
+  "verifiedAt": "2026-10-27"
 }
