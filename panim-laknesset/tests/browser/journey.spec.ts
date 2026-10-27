@@ -60,6 +60,8 @@ test('undecided, one selection, image fallback, and returning to baseline', asyn
   await page.getByRole('button', { name: 'המשך למפת הגוש' }).click();
   await page.getByRole('button', { name: 'המשך לבחירת אנשים' }).click();
   await page.getByRole('checkbox').check();
+  await expect(page.locator('.portrait-fallback')).toHaveCount(6);
+  await expect(page.locator('.candidate-card img')).toHaveCount(0);
   await page.locator('.candidate-card').first().click();
   await page.getByRole('button', { name: 'הצג את התוצאות שלי' }).click();
   await expect(page.locator('.comparison-panel')).toContainText('עדיין לא החלטת');

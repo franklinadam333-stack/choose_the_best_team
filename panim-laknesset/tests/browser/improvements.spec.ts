@@ -1,0 +1,54 @@
+import { test, expect } from '@playwright/test';
+
+test('anonymous entry, baseline reset, selection clearing and RTL keyboard tabs', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'התנסות ללא בחירה פוליטית' }).click();
+  const reset = page.getByRole('button', { name: 'שחזור חלוקת ברירת המחדל' });
+  await expect(reset).toBeDisabled();
+  await page.getByRole('button', { name: 'הוסף מנדט: ישר! איזנקוט', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'המשך לבחירת אנשים' })).toBeDisabled();
+  await reset.click();
+  await expect(page.getByRole('button', { name: 'המשך לבחירת אנשים' })).toBeEnabled();
+  await page.getByRole('button', { name: 'המשך לבחירת אנשים' }).click();
+  await expect(page.getByRole('checkbox')).toBeChecked();
+  await page.locator('.candidate-card').first().click();
+  await expect(page.locator('.selection-count')).toHaveText('בחרת 1 מתוך 10');
+  await page.getByRole('button', { name: 'ניקוי הבחירות' }).click();
+  await expect(page.locator('.selection-count')).toHaveText('בחרת 0 מתוך 10');
+  await expect(page.getByRole('button', { name: 'הצג את התוצאות שלי' })).toBeDisabled();
+  await page.locator('.candidate-card').first().click();
+  await page.getByRole('button', { name: 'הצג את התוצאות שלי' }).click();
+  await expect(page.locator('.original-intention strong')).toHaveText('עדיין לא החלטתי');
+  const first = page.getByRole('tab').first();
+  await first.focus();
+  await page.keyboard.press('ArrowLeft');
+  await expect(page.getByRole('tab').nth(1)).toBeFocused();
+  await expect(page.getByRole('tab').nth(1)).toHaveAttribute('aria-selected', 'true');
+  await page.keyboard.press('End');
+  await expect(page.getByRole('tab').last()).toBeFocused();
+  await page.keyboard.press('ArrowLeft');
+  await expect(first).toBeFocused();
+  await expect(first).toHaveAttribute('aria-selected', 'true');
+  await page.keyboard.press('ArrowRight');
+  await expect(page.getByRole('tab').last()).toBeFocused();
+  await page.keyboard.press('Home');
+  await expect(first).toBeFocused();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('corrupted local storage recovers and unavailable storage does not block use', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.addInitScript(() => { try { localStorage.setItem('panim-laknesset-session-v1', '{not-json'); } catch {} });
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: 'התנסות ללא בחירה פוליטית' })).toBeVisible();
+  await page.addInitScript(() => Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Storage disabled', 'SecurityError'); } }));
+  await page.reload();
+  await page.getByRole('button', { name: 'התנסות ללא בחירה פוליטית' }).click();
+  await page.getByRole('button', { name: 'המשך לבחירת אנשים' }).click();
+  await page.locator('.candidate-card').first().click();
+  await page.getByRole('button', { name: 'הצג את התוצאות שלי' }).click();
+  await expect(page.locator('.original-intention strong')).toHaveText('עדיין לא החלטתי');
+  await expect(page.locator('.notice')).toContainText('לא ניתן לשמור');
+  expect(errors).toEqual([]);
+});

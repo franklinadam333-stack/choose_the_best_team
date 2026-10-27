@@ -8,6 +8,8 @@ The supplied brief describes 72 pilot positions but includes no sourced ordered 
 
 The named 10-person acceptance case is **blocked**: party affiliations and list positions were not supplied. No mappings were invented to force the expected 3/3/4 result. Its test is explicitly skipped. Government election sources could not be accessed from the current environment (proxy returned 403).
 
+To try the app without recording a party preference, choose **התנסות ללא בחירה פוליטית** on the first screen. This explicitly enables anonymous test mode and uses “undecided” as the initial intention, without preselecting candidates. The baseline reset restores the documented default; selection clearing preserves the baseline and initial intention. Scenario tabs support RTL arrow keys, Home and End. Missing images fall back to an inline icon, even when the placeholder image cannot load. Saved sessions are validated on restore, with stale selections removed and incomplete sessions returned to the appropriate step. The app remains usable when localStorage is blocked, but progress then cannot survive a reload.
+
 ## Local development
 
 Use Node.js 24 (Next.js requires Node 20.9+). From this directory:
