@@ -26,7 +26,7 @@ export interface Candidate {
   sourceCandidateId?: string;
   profileUrl?: string;
   officialProfileUrl?: string | null;
-  dataOrigin?: 'user_provided';
+  dataOrigin?: 'user_provided' | 'official_cec_mirror';
 }
 export const candidates = rawCandidates as Candidate[];
 export function isSelectableCandidate(candidate: Candidate): boolean {
