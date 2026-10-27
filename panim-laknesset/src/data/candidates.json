@@ -850,9 +850,9 @@
     "fullNameHe": "אבי דאבוש",
     "partyId": "golan",
     "listPosition": 13,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Avi%20Dabush%20-%20Shavuot%202024.jpg?width=500",
+    "imageCredit": "Nizzan Cohen",
+    "imageLicense": "CC BY 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -860,7 +860,9 @@
     "sourceCandidateId": "d13",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Avi_Dabush_-_Shavuot_2024.jpg"
   },
   {
     "candidateId": "golan-14",
@@ -1061,9 +1063,9 @@
     "fullNameHe": "לילי בן עמי",
     "partyId": "lieberman",
     "listPosition": 11,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2024%20Lili%20Ben%20Ami%20(cropped).jpg?width=500",
+    "imageCredit": "U.S. Embassy Jerusalem",
+    "imageLicense": "CC BY 2.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1071,7 +1073,9 @@
     "sourceCandidateId": "l11",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:2024_Lili_Ben_Ami_(cropped).jpg"
   },
   {
     "candidateId": "lieberman-12",
