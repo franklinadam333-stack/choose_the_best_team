@@ -28,6 +28,7 @@ export interface Candidate {
   officialProfileUrl?: string | null;
   imageSourceUrl?: string;
   imageNote?: string | null;
+  imageRightsStatus?: 'unconfirmed';
   imageLicenseUrl?: string;
   dataOrigin?: 'user_provided' | 'official_cec_mirror';
 }
