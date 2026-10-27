@@ -565,9 +565,9 @@
     "fullNameHe": "נאור שירי",
     "partyId": "bennett",
     "listPosition": 14,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Naor%20Shiri%20(R%20H%203553).jpg?width=500",
+    "imageCredit": "Ronen Horesh / Knesset Archives",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -575,7 +575,9 @@
     "sourceCandidateId": "b14",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Naor_Shiri_(R_H_3553).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "bennett-15",
@@ -599,9 +601,9 @@
     "fullNameHe": "ולדימיר בליאק",
     "partyId": "bennett",
     "listPosition": 16,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vladimir%20Beliak%20(R%20H%204043).jpg?width=500",
+    "imageCredit": "Ronen Horesh / Knesset Archives",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -609,7 +611,9 @@
     "sourceCandidateId": "b16",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Vladimir_Beliak_(R_H_4043).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "bennett-17",
@@ -633,9 +637,9 @@
     "fullNameHe": "יוראי להב הרצנו",
     "partyId": "bennett",
     "listPosition": 18,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Yorai%20Lahav-Hertzanu%20(SHL%209207).jpg?width=500",
+    "imageCredit": "Shlomi Amsalem / Knesset Archives",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -643,7 +647,9 @@
     "sourceCandidateId": "b18",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%A8%D7%A7",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Yorai_Lahav-Hertzanu_(SHL_9207).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "golan-01",
@@ -770,9 +776,9 @@
     "fullNameHe": "משה רדמן",
     "partyId": "golan",
     "listPosition": 9,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moshe%20Radman.png?width=500",
+    "imageCredit": "Pixie.tt",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -780,7 +786,9 @@
     "sourceCandidateId": "d9",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Moshe_Radman.png",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "golan-10",
@@ -804,9 +812,9 @@
     "fullNameHe": "נמרוד שפר",
     "partyId": "golan",
     "listPosition": 11,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tat-Aluf%20Nimrod%20Shefer%201.jpg?width=500",
+    "imageCredit": "IDF Spokesperson's Unit",
+    "imageLicense": "CC BY-SA 3.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -814,16 +822,18 @@
     "sourceCandidateId": "d11",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Tat-Aluf_Nimrod_Shefer_1.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
   {
     "candidateId": "golan-12",
     "fullNameHe": "מורן זר קצנשטיין",
     "partyId": "golan",
     "listPosition": 12,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moran%20Zer%20Katzenstein%202026.jpg?width=500",
+    "imageCredit": "יבגני גבריאלוביץ",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -831,7 +841,9 @@
     "sourceCandidateId": "d12",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Moran_Zer_Katzenstein_2026.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "golan-13",
@@ -855,9 +867,9 @@
     "fullNameHe": "אמילי מואטי",
     "partyId": "golan",
     "listPosition": 14,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Emilie%20Moatti%20(SHL%208044).jpg?width=500",
+    "imageCredit": "Shlomi Amsalem / Knesset Archives",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -865,16 +877,18 @@
     "sourceCandidateId": "d14",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Emilie_Moatti_(SHL_8044).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "golan-15",
     "fullNameHe": "תומר אביטל",
     "partyId": "golan",
     "listPosition": 15,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%D7%AA%D7%95%D7%9E%D7%A8%20%D7%90%D7%91%D7%99%D7%98%D7%9C.jpg?width=500",
+    "imageCredit": "תומר אביטל",
+    "imageLicense": "CC BY-SA 3.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -882,7 +896,9 @@
     "sourceCandidateId": "d15",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%90%D7%9E%D7%AA",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:%D7%AA%D7%95%D7%9E%D7%A8_%D7%90%D7%91%D7%99%D7%98%D7%9C.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
   {
     "candidateId": "lieberman-01",
@@ -1026,9 +1042,9 @@
     "fullNameHe": "דן אילוז",
     "partyId": "lieberman",
     "listPosition": 10,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dan%20Illouz%20(cropped1).jpg?width=500",
+    "imageCredit": "Sharon Hasson",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1036,7 +1052,9 @@
     "sourceCandidateId": "l10",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Dan_Illouz_(cropped1).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "lieberman-11",
@@ -1060,9 +1078,9 @@
     "fullNameHe": "יעל בנבנישתי",
     "partyId": "lieberman",
     "listPosition": 12,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Yael%20Benvenisti%2001.jpg?width=500",
+    "imageCredit": "Nizzan Cohen",
+    "imageLicense": "CC BY 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1070,7 +1088,9 @@
     "sourceCandidateId": "l12",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Yael_Benvenisti_01.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "candidateId": "lieberman-13",
@@ -1094,9 +1114,9 @@
     "fullNameHe": "לימור מגן תלם",
     "partyId": "lieberman",
     "listPosition": 14,
-    "imagePath": "/silhouette.svg",
-    "imageCredit": null,
-    "imageLicense": null,
+    "imagePath": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Limor%20Magen-Telem%20(magen).jpg?width=500",
+    "imageCredit": "Knesset Archives",
+    "imageLicense": "CC BY-SA 4.0",
     "sourceUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "lastVerifiedAt": "2026-10-27",
     "verificationStatus": "verified",
@@ -1104,7 +1124,9 @@
     "sourceCandidateId": "l14",
     "profileUrl": "https://bechirot.fyi/lists/26/%D7%9C",
     "officialProfileUrl": null,
-    "dataOrigin": "official_cec_mirror"
+    "dataOrigin": "official_cec_mirror",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Limor_Magen-Telem_(magen).jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "candidateId": "lieberman-15",
